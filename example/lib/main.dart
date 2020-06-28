@@ -10,7 +10,7 @@ class RatelApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text('RFlutter Alert by Ratel'),
+          title: Text('FlatDialog'),
         ),
         body: PopupDialog(),
       ),
@@ -26,27 +26,27 @@ class PopupDialog extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           RaisedButton(
-            child: Text('Basic Alert'),
+            child: Text('Basic Dialog'),
             onPressed: () => _onBasicAlertPressed(context),
           ),
           RaisedButton(
-            child: Text('Alert with Button'),
+            child: Text('Dialog with Button'),
             onPressed: () => _onAlertButtonPressed(context),
           ),
           RaisedButton(
-            child: Text('Alert with Buttons'),
+            child: Text('Dialog with Buttons'),
             onPressed: () => _onAlertButtonsPressed(context),
           ),
           RaisedButton(
-            child: Text('Alert with Style'),
+            child: Text('Dialog with Style'),
             onPressed: () => _onAlertWithStylePressed(context),
           ),
           RaisedButton(
-            child: Text('Alert with Custom Image'),
+            child: Text('Dialog with Custom Image'),
             onPressed: () => _onAlertWithCustomImagePressed(context),
           ),
           RaisedButton(
-            child: Text('Alert with Custom Content'),
+            child: Text('Dialog with Custom Content'),
             onPressed: () => _onAlertWithCustomContentPressed(context),
           ),
         ],
@@ -54,42 +54,39 @@ class PopupDialog extends StatelessWidget {
     );
   }
 
-// The easiest way for creating RFlutter Alert
   Future<bool> _onBasicAlertPressed(BuildContext context) {
     return Alert(
             context: context,
-            title: "RFLUTTER ALERT",
-            desc: "Flutter is more awesome with RFlutter Alert.")
+            title: "DIALOG",
+            desc: "Here is some example text.")
         .show();
   }
 
-// Alert with single button.
   Future<bool> _onAlertButtonPressed(BuildContext context) {
     return Alert(
       context: context,
       type: DialogType.error,
-      title: "RFLUTTER ALERT",
-      desc: "Flutter is more awesome with RFlutter Alert.",
+      title: "DIALOG EXAMPLE",
+      desc: "Some text for you to understand the layout :)",
       buttons: [
         FlatDialogButton(
-          child: Text(
-            "COOL",
+          child: const Text(
+            "Amazing!",
             style: TextStyle(color: Colors.white, fontSize: 20),
           ),
           onPressed: () => Navigator.pop(context),
-          width: 120,
+          width: 150,
         )
       ],
     ).show();
   }
 
-// Alert with multiple and custom buttons
   Future<bool> _onAlertButtonsPressed(BuildContext context) {
     return Alert(
       context: context,
       type: DialogType.warning,
-      title: "RFLUTTER ALERT",
-      desc: "Flutter is more awesome with RFlutter Alert.",
+      title: "DIALOG",
+      desc: "Here is another dialog example.",
       buttons: [
         FlatDialogButton(
           child: Text(
@@ -114,15 +111,13 @@ class PopupDialog extends StatelessWidget {
     ).show();
   }
 
-// Advanced using of alerts
   Future<bool> _onAlertWithStylePressed(BuildContext context) {
-    // Reusable alert style
-    var alertStyle = AlertStyle(
+    AlertStyle alertStyle = AlertStyle(
         animationStyle: AnimationStyle.fromTop,
         closeButtonVisible: false,
         isTapDismiss: false,
         descStyle: TextStyle(fontWeight: FontWeight.bold),
-        animationDuration: Duration(milliseconds: 400),
+        animationDuration: const Duration(milliseconds: 400),
         alertBorder: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(0.0),
           side: BorderSide(
@@ -132,9 +127,8 @@ class PopupDialog extends StatelessWidget {
         titleStyle: TextStyle(
           color: Colors.red,
         ),
-        boxConstraints: BoxConstraints.expand(width: 300));
+        boxConstraints: const BoxConstraints.expand(width: 300));
 
-    // Alert dialog using custom alert style
     return Alert(
       context: context,
       style: alertStyle,
@@ -144,28 +138,26 @@ class PopupDialog extends StatelessWidget {
       buttons: [
         FlatDialogButton(
           child: Text(
-            "COOL",
-            style: TextStyle(color: Colors.white, fontSize: 20),
+            "Okay",
+            style: const TextStyle(color: Colors.white, fontSize: 20),
           ),
           onPressed: () => Navigator.pop(context),
-          color: Color.fromRGBO(0, 179, 134, 1.0),
+          color: const Color.fromRGBO(0, 179, 134, 1.0),
           radius: BorderRadius.circular(0.0),
         ),
       ],
     ).show();
   }
 
-// Alert custom images
   Future<bool> _onAlertWithCustomImagePressed(BuildContext context) {
     return Alert(
       context: context,
-      title: "RFLUTTER ALERT",
-      desc: "Flutter is more awesome with RFlutter Alert.",
-      image: Image.asset("assets/success.png"),
+      title: "Alert with a different image.",
+      desc: "Custom image example",
+      image: Image.asset("assets/images/success.png"), 
     ).show();
   }
 
-// Alert custom content
   Future<bool> _onAlertWithCustomContentPressed(BuildContext context) {
     return Alert(
         context: context,

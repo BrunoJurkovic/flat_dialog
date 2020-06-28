@@ -37,7 +37,7 @@ class FlatDialogButton extends StatelessWidget {
       child: Material(
         color: Colors.transparent,
         child: InkWell(
-          onTap: () => {onPressed},
+          onTap: () => {onPressed()},
           child: Center(
             child: child,
           ),
