@@ -7,7 +7,7 @@ import 'flat_dialog_style.dart';
 enum DialogType { error, success, info, warning, none }
 
 
-class Alert {
+class FlatDialog {
   final BuildContext context;
   final DialogType type;
   final AlertStyle style;
@@ -19,7 +19,7 @@ class Alert {
   final Function closeFunction;
 
 
-  Alert({
+  FlatDialog({
     @required this.context,
     this.type,
     this.style = const AlertStyle(),

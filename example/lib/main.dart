@@ -102,7 +102,7 @@ class PopupDialog extends StatelessWidget {
   }
 
   Future<bool> _onBasicAlertPressed(BuildContext context) {
-    return Alert(
+    return FlatDialog(
             context: context,
             title: "DIALOG",
             desc: "Here is some example text.")
@@ -110,7 +110,7 @@ class PopupDialog extends StatelessWidget {
   }
 
   Future<bool> _onAlertButtonPressed(BuildContext context) {
-    return Alert(
+    return FlatDialog(
       context: context,
       type: DialogType.error,
       title: "ERROR",
@@ -129,7 +129,7 @@ class PopupDialog extends StatelessWidget {
   }
 
   Future<bool> _onAlertButtonsPressed(BuildContext context) {
-    return Alert(
+    return FlatDialog(
       context: context,
       type: DialogType.warning,
       title: "DIALOG",
@@ -176,7 +176,7 @@ class PopupDialog extends StatelessWidget {
         ),
         boxConstraints: const BoxConstraints.expand(width: 300));
 
-    return Alert(
+    return FlatDialog(
       context: context,
       style: alertStyle,
       type: DialogType.info,
@@ -197,7 +197,7 @@ class PopupDialog extends StatelessWidget {
   }
 
   Future<bool> _onAlertWithCustomImagePressed(BuildContext context) {
-    return Alert(
+    return FlatDialog(
       context: context,
       title: "Alert with a different image.",
       desc: "Custom image example",
@@ -206,7 +206,7 @@ class PopupDialog extends StatelessWidget {
   }
 
   Future<bool> _onAlertWithCustomContentPressed(BuildContext context) {
-    return Alert(
+    return FlatDialog(
         context: context,
         title: "LOGIN",
         content: Column(
