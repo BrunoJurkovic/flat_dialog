@@ -1,11 +1,3 @@
-/*
- * rflutter_alert
- * Created by Ratel
- * https://ratel.com.tr
- * 
- * Copyright (c) 2018 Ratel, LLC. All rights reserved.
- * See LICENSE for distribution and usage details.
- */
 import 'package:flutter/material.dart';
 
 import 'flat_dialog_animations.dart';
@@ -13,8 +5,6 @@ import 'flat_dialog_button.dart';
 import 'flat_dialog_style.dart';
 
 enum DialogType { error, success, info, warning, none }
-
-
 
 
 class Alert {
@@ -146,7 +136,7 @@ class Alert {
                   image: DecorationImage(
                     image: AssetImage(
                       'assets/images/close.png',
-                      package: 'rflutter_alert',
+                      package: 'flat_dialog',
                     ),
                   ),
                 ),
@@ -154,7 +144,7 @@ class Alert {
                   color: Colors.transparent,
                   child: InkWell(
                     onTap: () {
-                      Navigator.pop(context);
+                      Navigator.of(context).pop();
                       closeFunction();
                     },
                   ),
@@ -208,25 +198,25 @@ class Alert {
       case DialogType.success:
         response = Image.asset(
           'assets/images/icon_success.png',
-          package: 'rflutter_alert',
+          package: 'flat_dialog',
         );
         break;
       case DialogType.error:
         response = Image.asset(
           'assets/images/icon_error.png',
-          package: 'rflutter_alert',
+          package: 'flat_dialog',
         );
         break;
       case DialogType.info:
         response = Image.asset(
           'assets/images/icon_info.png',
-          package: 'rflutter_alert',
+          package: 'flat_dialog',
         );
         break;
       case DialogType.warning:
         response = Image.asset(
           'assets/images/icon_warning.png',
-          package: 'rflutter_alert',
+          package: 'flat_dialog',
         );
         break;
       case DialogType.none:
