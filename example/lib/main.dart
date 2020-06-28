@@ -36,7 +36,9 @@ class PopupDialog extends StatelessWidget {
               onPressed: () => _onBasicAlertPressed(context),
             ),
           ),
-          SizedBox(height: 10,),
+          SizedBox(
+            height: 10,
+          ),
           Container(
             padding: const EdgeInsets.all(5),
             alignment: Alignment.center,
@@ -48,7 +50,9 @@ class PopupDialog extends StatelessWidget {
               onPressed: () => _onAlertButtonPressed(context),
             ),
           ),
-          SizedBox(height: 10,),
+          SizedBox(
+            height: 10,
+          ),
           Container(
             padding: const EdgeInsets.all(5),
             alignment: Alignment.center,
@@ -60,7 +64,9 @@ class PopupDialog extends StatelessWidget {
               onPressed: () => _onAlertButtonsPressed(context),
             ),
           ),
-          const SizedBox(height: 10,),
+          const SizedBox(
+            height: 10,
+          ),
           Container(
             padding: const EdgeInsets.all(5),
             alignment: Alignment.center,
@@ -72,7 +78,9 @@ class PopupDialog extends StatelessWidget {
               onPressed: () => _onAlertWithStylePressed(context),
             ),
           ),
-          const SizedBox(height: 10,),
+          const SizedBox(
+            height: 10,
+          ),
           Container(
             padding: const EdgeInsets.all(5),
             alignment: Alignment.center,
@@ -84,7 +92,9 @@ class PopupDialog extends StatelessWidget {
               onPressed: () => _onAlertWithCustomImagePressed(context),
             ),
           ),
-          const SizedBox(height: 10,),
+          const SizedBox(
+            height: 10,
+          ),
           Container(
             padding: const EdgeInsets.all(5),
             alignment: Alignment.center,
@@ -160,21 +170,24 @@ class PopupDialog extends StatelessWidget {
 
   Future<bool> _onAlertWithStylePressed(BuildContext context) {
     final AlertStyle alertStyle = AlertStyle(
-        animationStyle: AnimationStyle.fromTop,
-        closeButtonVisible: false,
-        isTapDismiss: false,
-        descStyle: TextStyle(fontWeight: FontWeight.bold),
-        animationDuration: const Duration(milliseconds: 400),
-        alertBorder: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(0.0),
-          side: BorderSide(
-            color: Colors.grey,
-          ),
+      animationStyle: AnimationStyle.fromTop,
+      closeButtonVisible: false,
+      isTapDismiss: false,
+      descStyle: TextStyle(fontWeight: FontWeight.bold),
+      animationDuration: const Duration(milliseconds: 400),
+      alertBorder: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(0.0),
+        side: BorderSide(
+          color: Colors.grey,
         ),
-        titleStyle: TextStyle(
-          color: Colors.red,
-        ),
-        boxConstraints: const BoxConstraints.expand(width: 300));
+      ),
+      titleStyle: TextStyle(
+        color: Colors.red,
+      ),
+      boxConstraints: const BoxConstraints.expand(
+        width: 300,
+      ),
+    );
 
     return FlatDialog(
       context: context,
