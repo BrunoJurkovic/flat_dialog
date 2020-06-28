@@ -25,29 +25,76 @@ class PopupDialog extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          RaisedButton(
-            child: Text('Basic Dialog'),
-            onPressed: () => _onBasicAlertPressed(context),
+          Container(
+            padding: const EdgeInsets.all(5),
+            alignment: Alignment.center,
+            width: 300,
+            decoration:
+                BoxDecoration(color: Colors.indigoAccent.withOpacity(0.8)),
+            child: FlatButton(
+              child: Text('Normal Dialog'),
+              onPressed: () => _onBasicAlertPressed(context),
+            ),
           ),
-          RaisedButton(
-            child: Text('Dialog with Button'),
-            onPressed: () => _onAlertButtonPressed(context),
+          SizedBox(height: 10,),
+          Container(
+            padding: const EdgeInsets.all(5),
+            alignment: Alignment.center,
+            width: 300,
+            decoration:
+                BoxDecoration(color: Colors.indigoAccent.withOpacity(0.8)),
+            child: FlatButton(
+              child: Text('Error Dialog'),
+              onPressed: () => _onAlertButtonPressed(context),
+            ),
           ),
-          RaisedButton(
-            child: Text('Dialog with Buttons'),
-            onPressed: () => _onAlertButtonsPressed(context),
+          SizedBox(height: 10,),
+          Container(
+            padding: const EdgeInsets.all(5),
+            alignment: Alignment.center,
+            width: 300,
+            decoration:
+                BoxDecoration(color: Colors.indigoAccent.withOpacity(0.8)),
+            child: FlatButton(
+              child: Text('Dialog with Gradient Buttons'),
+              onPressed: () => _onAlertButtonsPressed(context),
+            ),
           ),
-          RaisedButton(
-            child: Text('Dialog with Style'),
-            onPressed: () => _onAlertWithStylePressed(context),
+          const SizedBox(height: 10,),
+          Container(
+            padding: const EdgeInsets.all(5),
+            alignment: Alignment.center,
+            width: 300,
+            decoration:
+                BoxDecoration(color: Colors.indigoAccent.withOpacity(0.8)),
+            child: FlatButton(
+              child: Text('Dialog with a Custom Style'),
+              onPressed: () => _onAlertWithStylePressed(context),
+            ),
           ),
-          RaisedButton(
-            child: Text('Dialog with Custom Image'),
-            onPressed: () => _onAlertWithCustomImagePressed(context),
+          const SizedBox(height: 10,),
+          Container(
+            padding: const EdgeInsets.all(5),
+            alignment: Alignment.center,
+            width: 300,
+            decoration:
+                BoxDecoration(color: Colors.indigoAccent.withOpacity(0.8)),
+            child: FlatButton(
+              child: Text('Dialog with an Custom Image'),
+              onPressed: () => _onAlertWithCustomImagePressed(context),
+            ),
           ),
-          RaisedButton(
-            child: Text('Dialog with Custom Content'),
-            onPressed: () => _onAlertWithCustomContentPressed(context),
+          const SizedBox(height: 10,),
+          Container(
+            padding: const EdgeInsets.all(5),
+            alignment: Alignment.center,
+            width: 300,
+            decoration:
+                BoxDecoration(color: Colors.indigoAccent.withOpacity(0.8)),
+            child: FlatButton(
+              child: Text('Dialog with some Custom Content'),
+              onPressed: () => _onAlertWithCustomContentPressed(context),
+            ),
           ),
         ],
       ),
@@ -112,7 +159,7 @@ class PopupDialog extends StatelessWidget {
   }
 
   Future<bool> _onAlertWithStylePressed(BuildContext context) {
-    AlertStyle alertStyle = AlertStyle(
+    final AlertStyle alertStyle = AlertStyle(
         animationStyle: AnimationStyle.fromTop,
         closeButtonVisible: false,
         isTapDismiss: false,
@@ -154,7 +201,7 @@ class PopupDialog extends StatelessWidget {
       context: context,
       title: "Alert with a different image.",
       desc: "Custom image example",
-      image: Image.asset("assets/images/success.png"), 
+      image: Image.asset("assets/images/success.png"),
     ).show();
   }
 
@@ -167,7 +214,7 @@ class PopupDialog extends StatelessWidget {
             TextField(
               decoration: InputDecoration(
                 icon: Icon(Icons.account_circle),
-                labelText: 'Username',
+                labelText: 'E-Mail',
               ),
             ),
             TextField(

@@ -19,8 +19,8 @@ class AlertStyle {
     this.animationStyle = AnimationStyle.fromLeft,
     this.alertBorder,
     this.animationDuration = const Duration(milliseconds: 150),
-    this.backgroundColor = Colors.white,
-    this.overlayColor = Colors.black12,
+    this.backgroundColor = const Color.fromRGBO(255, 255, 255, 50),
+    this.overlayColor = Colors.black26,
     this.titleStyle = const TextStyle(
       color: Colors.black,
       fontWeight: FontWeight.w500,
