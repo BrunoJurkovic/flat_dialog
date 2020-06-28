@@ -113,7 +113,7 @@ class PopupDialog extends StatelessWidget {
     return Alert(
       context: context,
       type: DialogType.error,
-      title: "DIALOG EXAMPLE",
+      title: "ERROR",
       desc: "Some text for you to understand the layout :)",
       buttons: [
         FlatDialogButton(
@@ -150,8 +150,8 @@ class PopupDialog extends StatelessWidget {
           ),
           onPressed: () => Navigator.pop(context),
           gradient: LinearGradient(colors: [
-            Color.fromRGBO(116, 116, 191, 1.0),
-            Color.fromRGBO(52, 138, 199, 1.0)
+            Colors.redAccent,
+            Colors.redAccent.withOpacity(0.6),
           ]),
         )
       ],
