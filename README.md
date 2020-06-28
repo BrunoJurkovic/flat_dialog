@@ -42,7 +42,7 @@ Future<bool> throwErrorDialog(BuildContext context) {
 
 3.  **Customize your new flat dialog (with `style`)!** 
 ```dart
-	AlertStyle(
+AlertStyle(
       animationStyle: AnimationStyle.fromTop, // How the dialog animates
       closeButtonVisible: false, // Does the [x] in the corner appear?
       isTapDismiss: true, // If you click outside the dialog, does it close?
