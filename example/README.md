@@ -1,4 +1,4 @@
-``dart
+```dart
 import 'package:flutter/material.dart';
 import 'package:flat_dialog/flat_dialog.dart';
 
@@ -191,4 +191,4 @@ class PopupDialog extends StatelessWidget {
         ]).show();
   }
 }
-``
+```
