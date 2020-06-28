@@ -61,7 +61,8 @@ Future<bool> throwErrorDialog(BuildContext context) {
         width: 300,
       ),
     );
-    ```
+```
+
 4. **Check out the example project for even more features!**
 
 # Want to contribute?
