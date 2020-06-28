@@ -12,6 +12,7 @@ dependencies:
     sdk: flutter
 
 dev_dependencies:
+  lint: 
   flutter_test:
     sdk: flutter
 
