@@ -20,7 +20,7 @@ class AlertStyle {
   final TextStyle titleStyle;
   final TextStyle descStyle;
   final EdgeInsets buttonAreaPadding;
-  final BoxConstraints boxConstraints ;
+  final BoxConstraints boxConstraints;
 
 
   const AlertStyle({
