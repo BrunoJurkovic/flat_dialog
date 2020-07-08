@@ -8,16 +8,20 @@ class AlertStyle {
   final ShapeBorder alertBorder;
   final bool closeButtonVisible;
   final bool isTapDismiss;
+  final bool isDescScrollable;
   final Color backgroundColor;
   final Color overlayColor;
   final TextStyle titleStyle;
   final TextStyle descStyle;
   final EdgeInsets buttonAreaPadding;
   final BoxConstraints boxConstraints;
+  final double descHeight;
 
   const AlertStyle({
     this.animationStyle = AnimationStyle.fromLeft,
     this.alertBorder,
+    this.isDescScrollable = false,
+    this.descHeight,
     this.animationDuration = const Duration(milliseconds: 150),
     this.backgroundColor = const Color.fromRGBO(255, 255, 255, 50),
     this.overlayColor = Colors.black26,

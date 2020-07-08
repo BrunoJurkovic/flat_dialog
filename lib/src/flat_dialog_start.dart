@@ -6,7 +6,6 @@ import 'flat_dialog_style.dart';
 
 enum DialogType { error, success, info, warning, none }
 
-
 class FlatDialog {
   final BuildContext context;
   final DialogType type;
@@ -17,7 +16,6 @@ class FlatDialog {
   final Widget content;
   final List<FlatDialogButton> buttons;
   final Function closeFunction;
-
 
   FlatDialog({
     @required this.context,
@@ -62,11 +60,14 @@ class FlatDialog {
   Widget _buildDialog() {
     return Center(
       child: ConstrainedBox(
-        constraints: style.boxConstraints ?? const BoxConstraints.expand(width: double.infinity, height: double.infinity),
+        constraints: style.boxConstraints ??
+            const BoxConstraints.expand(
+                width: double.infinity, height: double.infinity),
         child: Center(
           child: SingleChildScrollView(
             child: AlertDialog(
-              backgroundColor: style.backgroundColor ?? Theme.of(context).dialogBackgroundColor,
+              backgroundColor: style.backgroundColor ??
+                  Theme.of(context).dialogBackgroundColor,
               shape: style.alertBorder ?? _defaultShape(),
               title: Center(
                 child: Column(
@@ -75,7 +76,7 @@ class FlatDialog {
                     _getCloseButton(),
                     Padding(
                       padding: EdgeInsets.fromLTRB(
-                          20, style.closeButtonVisible ? 0 : 20, 20, 0),
+                          10, style.closeButtonVisible ? 0 : 20, 10, 0),
                       child: Column(
                         children: <Widget>[
                           _getImage(),
@@ -90,11 +91,25 @@ class FlatDialog {
                           SizedBox(
                             height: desc == null ? 5 : 10,
                           ),
-                          if (desc == null) Container() else Text(
-                                  desc,
-                                  style: style.descStyle,
-                                  textAlign: TextAlign.center,
-                                ),
+                          if (desc == null)
+                            Container()
+                          else
+                            style.isDescScrollable
+                                ? Container(
+                                    height: style.descHeight ?? 250,
+                                    child: SingleChildScrollView(
+                                      child: Text(
+                                        desc,
+                                        style: style.descStyle,
+                                        textAlign: TextAlign.center,
+                                      ),
+                                    ),
+                                  )
+                                : Text(
+                                    desc,
+                                    style: style.descStyle,
+                                    textAlign: TextAlign.center,
+                                  ),
                           if (content == null) Container() else content,
                         ],
                       ),
@@ -227,7 +242,8 @@ class FlatDialog {
   }
 
 // Shows alert with selected animation
-  AnimatedWidget _showAnimation(Animation<double> animation, Animation<double> secondaryAnimation, Widget child) {
+  AnimatedWidget _showAnimation(Animation<double> animation,
+      Animation<double> secondaryAnimation, Widget child) {
     if (style.animationStyle == AnimationStyle.fromRight) {
       return AnimationTransition.fromRight(
           animation, secondaryAnimation, child);

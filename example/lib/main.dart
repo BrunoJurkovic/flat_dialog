@@ -173,6 +173,7 @@ class PopupDialog extends StatelessWidget {
       animationStyle: AnimationStyle.fromTop,
       closeButtonVisible: false,
       isTapDismiss: false,
+      isDescScrollable: true,
       descStyle: TextStyle(fontWeight: FontWeight.bold),
       animationDuration: const Duration(milliseconds: 400),
       alertBorder: RoundedRectangleBorder(
@@ -184,9 +185,7 @@ class PopupDialog extends StatelessWidget {
       titleStyle: TextStyle(
         color: Colors.red,
       ),
-      boxConstraints: const BoxConstraints.expand(
-        width: 300,
-      ),
+      descHeight: 50
     );
 
     return FlatDialog(
@@ -194,7 +193,25 @@ class PopupDialog extends StatelessWidget {
       style: alertStyle,
       type: DialogType.info,
       title: "RFLUTTER ALERT",
-      desc: "Flutter is more awesome with RFlutter Alert.",
+      desc: """
+Flutter is more awesome with RFlutter Alert.
+Flutter is more awesome with RFlutter Alert.
+Flutter is more awesome with RFlutter Alert.
+Flutter is more awesome with RFlutter Alert.
+Flutter is more awesome with RFlutter Alert.
+Flutter is more awesome with RFlutter Alert.
+Flutter is more awesome with RFlutter Alert.
+Flutter is more awesome with RFlutter Alert.
+Flutter is more awesome with RFlutter Alert.
+Flutter is more awesome with RFlutter Alert.
+Flutter is more awesome with RFlutter Alert.
+Flutter is more awesome with RFlutter Alert.
+Flutter is more awesome with RFlutter Alert.
+Flutter is more awesome with RFlutter Alert.
+Flutter is more awesome with RFlutter Alert.
+Flutter is more awesome with RFlutter Alert.
+Flutter is more awesome with RFlutter Alert.
+Flutter is more awesome with RFlutter Alert.""",
       buttons: [
         FlatDialogButton(
           child: Text(
