@@ -95,8 +95,24 @@ class FlatDialog {
                             Container()
                           else
                             style.isDescScrollable
+                                // ? Container(
+                                //     height: style.descHeight ?? 250,
+                                //     child: SingleChildScrollView(
+                                //       child: Text(
+                                //         desc,
+                                //         style: style.descStyle,
+                                //         textAlign: TextAlign.center,
+                                //       ),
+                                //     ),
+                                //   )
                                 ? Container(
-                                    height: style.descHeight ?? 250,
+                                    constraints: BoxConstraints(
+                                      minHeight:
+                                          MediaQuery.of(context).size.height *
+                                              0.025,
+                                      maxHeight:
+                                          style.descHeight,
+                                    ),
                                     child: SingleChildScrollView(
                                       child: Text(
                                         desc,

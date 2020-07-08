@@ -195,23 +195,7 @@ class PopupDialog extends StatelessWidget {
       title: "RFLUTTER ALERT",
       desc: """
 Flutter is more awesome with RFlutter Alert.
-Flutter is more awesome with RFlutter Alert.
-Flutter is more awesome with RFlutter Alert.
-Flutter is more awesome with RFlutter Alert.
-Flutter is more awesome with RFlutter Alert.
-Flutter is more awesome with RFlutter Alert.
-Flutter is more awesome with RFlutter Alert.
-Flutter is more awesome with RFlutter Alert.
-Flutter is more awesome with RFlutter Alert.
-Flutter is more awesome with RFlutter Alert.
-Flutter is more awesome with RFlutter Alert.
-Flutter is more awesome with RFlutter Alert.
-Flutter is more awesome with RFlutter Alert.
-Flutter is more awesome with RFlutter Alert.
-Flutter is more awesome with RFlutter Alert.
-Flutter is more awesome with RFlutter Alert.
-Flutter is more awesome with RFlutter Alert.
-Flutter is more awesome with RFlutter Alert.""",
+""",
       buttons: [
         FlatDialogButton(
           child: Text(
